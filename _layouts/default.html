@@ -15,7 +15,7 @@
     
     <div class="row">
       <div class="large-12 columns">
-        <img src="/imgs/logo.png">
+        <img src="/imgs/logo.png" class="logo">
       </div>
     </div>
     
@@ -29,7 +29,7 @@
 
           <section class="top-bar-section">
             <ul class="right">
-              <li><a href="/">Home</a></li>
+              <li><a href="/" {% if page.title == "Home" %} class="active" {% endif %}>Home</a></li>
               <li class="has-dropdown">
                 <a href="#">Hypnosis</a>
                 <ul class="dropdown">
@@ -40,7 +40,7 @@
                   <li><a href="/uses.html">Uses of Hypnosis</a></li>
                 </ul>
               </li>
-              <li><a href="/about.html">About Me</a></li>
+              <li><a href="/about.html" {% if page.title == "About Me" %} class="active" {% endif %}>About Me</a></li>
             </ul>
           </section>
         </nav>        
@@ -55,8 +55,9 @@
 
     <div class="row">
       <div class="large-12 columns">
-        <nav class="top-bar" data-topbar="">
-        </nav>
+        <footer class="text-right top-bar">
+          Copyright &copy; 2014 Julia Lewis
+        </footer>
       </div>     
     </div>
     
