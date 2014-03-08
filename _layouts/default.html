@@ -5,36 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <title>{{ page.title }}</title>
+    <title>{{ site.name | page.title }}</title>
     
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/app.css" />
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
     
     <div class="row">
       <div class="large-12 columns">
-
-        <nav class="top-bar" data-topbar="">
+        <img src="/imgs/logo.png">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <nav class="top-bar" data-topbar>
           <ul class="title-area">
-            <li class="name">
-              <h1><a href="/">{{ site.name }}</a></h1>
-            </li>
-            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+            <li class="name"></li>
+            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
           </ul>
-
 
           <section class="top-bar-section">
             <ul class="right">
-              <li class="divider"></li>
-              <li class="not-click">
-                <a href="hypnosis.html">What is hypnosis?</a>
+              <li><a href="/">Home</a></li>
+              <li class="has-dropdown">
+                <a href="#">Hypnosis</a>
+                <ul class="dropdown">
+                  <li><a href="/hypnosis.html">What is Hypnosis?</a></li>
+                  <li><a href="/self-hypnosis.html">What is Self-Hypnosis?</a></li>
+                  <li><a href="/risks.html">Are there any Risks?</a></li>
+                  <li><a href="/process.html">The Hypnotherapy Process</a></li>
+                  <li><a href="/uses.html">Uses of Hypnosis</a></li>
+                </ul>
               </li>
-
-              <li class="divider"></li>
-              <li class="not-click">
-                <a href="find-me.html">How to find me</a>
-              </li>
+              <li><a href="/about.html">About Me</a></li>
             </ul>
           </section>
         </nav>        
@@ -44,6 +50,13 @@
     <div class="row">
       <div class="large-12 columns">
         {{ content }}
+      </div>     
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <nav class="top-bar" data-topbar="">
+        </nav>
       </div>     
     </div>
     

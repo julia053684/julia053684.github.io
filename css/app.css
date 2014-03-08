@@ -1,0 +1,8 @@
+.white-on-blue {
+  background-color: rgba(26,69,109,1);
+  color: #fff;
+}
+
+.white-on-blue h3, .white-on-blue h4 {
+  color: #fff;
+}
