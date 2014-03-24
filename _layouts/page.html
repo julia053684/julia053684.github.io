@@ -9,19 +9,10 @@ layout: default
 </div>
 
 <div class="row">
-  {% if page.images %}
-  	<div class="large-8 medium-8 columns">
-  	  {{ page.content }}
-    </div>
-
-    <div class="large-4 medium-4 columns">
-      {% for item in page.images %}
-        <img src="{{ item.image }}"><br/><br/>
-      {% endfor %}
-    </div>
-  {% else %}
-  	<div class="large-12 medium-12 columns">
-  	  {{ page.content }}
-    </div>
-  {% endif %}
+	<div class="large-8 medium-8 columns">
+	  {{ page.content }}
+	</div>
+	<div class="large-4 medium-4 columns">
+	  {% include contact-form.html %}
+  </div>
 </div>

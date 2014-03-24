@@ -12,59 +12,18 @@
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
-    
-    <div class="row">
-      <div class="large-12 columns">
-        <img src="/imgs/logo.png" class="logo">
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="large-12 columns">
-        <nav class="top-bar" data-topbar>
-          <ul class="title-area">
-            <li class="name"></li>
-            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-          </ul>
 
-          <section class="top-bar-section">
-            <ul class="right">
-              <li><a href="/" {% if page.title == "Home" %} class="active" {% endif %}>Home</a></li>
-              <li class="has-dropdown">
-                <a href="#">Hypnosis</a>
-                <ul class="dropdown">
-                  <li><a href="/hypnosis.html">What is Hypnosis?</a></li>
-                  <li><a href="/self-hypnosis.html">What is Self-Hypnosis?</a></li>
-                  <li><a href="/risks.html">Are there any Risks?</a></li>
-                  <li><a href="/process.html">The Hypnotherapy Process</a></li>
-                  <li><a href="/uses.html">Uses of Hypnosis</a></li>
-                </ul>
-              </li>
-              <li><a href="/about.html" {% if page.title == "About Me" %} class="active" {% endif %}>About Me</a></li>
-            </ul>
-          </section>
-        </nav>        
-      </div>
-    </div>
+    {% include header.html %}
     
-    <div class="row">
-      <div class="large-12 columns">
-        {{ content }}
-      </div>     
-    </div>
+    {% include body.html %}
 
-    <div class="row">
-      <div class="large-12 columns">
-        <footer class="text-right top-bar">
-          Copyright &copy; 2014 Julia Lewis
-        </footer>
-      </div>     
-    </div>
+    {% include footer.html %}
     
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>
       $(document).foundation();
     </script>
+
   </body>
 </html>

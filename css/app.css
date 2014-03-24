@@ -9410,6 +9410,12 @@ th.hide-for-touch {
   padding: 20px;
 }
 
+.black-on-grey {
+  background-color: #dfdfdf;
+  color: #fff;
+  padding: 20px;
+}
+
 /* line 49, ../scss/app.scss */
 .white-on-blue h3, .white-on-blue h4 {
   color: #fff;
