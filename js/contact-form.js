@@ -47,7 +47,7 @@ function cleanResponse() {
 function sendMail() {
   $.ajax({
     type: "post",
-    url: "http://localhost:9292/send_email",
+    url: "http://shrouded-oasis-7984.herokuapp.com/send_email",
     data: $('#contact-form').serialize(),
     dataType: "json",
     success: function(response) {
