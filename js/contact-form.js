@@ -44,6 +44,14 @@ function cleanResponse() {
   $('#response').empty();
 }
 
+function cleanForm() {
+  var fields = $("#contact-form").serializeArray();
+  
+  jQuery.each(fields, function(i, field) {
+    $('#' + field.name).val('');
+  });
+}
+
 function sendMail() {
   $.ajax({
     type: "post",
@@ -53,6 +61,7 @@ function sendMail() {
     success: function(response) {
       if (response.message === "success") {
         writeMessage("Your message has been successfully sent.  Thank you.", false);
+        cleanForm();
       } else {
         writeMessage("Whoops!  There was an error sending your message.  Please try again.", true);
       }
