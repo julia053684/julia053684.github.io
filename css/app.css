@@ -9433,3 +9433,7 @@ footer {
   margin: 40px 0px 60px 0px;
   color: #fff;
 }
+
+img, iframe {
+  margin-bottom: 30px;
+}
