@@ -9405,9 +9405,14 @@ th.hide-for-touch {
 
 /* line 43, ../scss/app.scss */
 .white-on-blue {
-  background-color: #0051a0;
+  background-color: #1d71b8;
   color: #fff;
   padding: 20px;
+  border-radius: 3px;
+}
+
+.white-on-blue label {
+  color: #fff;
 }
 
 .black-on-grey {
