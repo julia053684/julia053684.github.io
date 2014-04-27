@@ -9457,3 +9457,7 @@ h4 {
   top: 450px; 
   margin-top: -450px;
 }
+
+.floating-image {
+  margin: 0px 40px 20px 0px;
+}
