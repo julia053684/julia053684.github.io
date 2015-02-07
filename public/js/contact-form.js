@@ -1,10 +1,8 @@
 function initializeContactForm() {
   $("#contact-form").submit(function(event) {
-    event.preventDefault();
     cleanResponse();
-    if (isValid()) {
-      sendMail();
-    } else {
+    if (!isValid()) {
+      event.preventDefault();
       writeMessage("Please supply all of the required information.", true);
     }
   });
@@ -42,29 +40,4 @@ function cleanResponse() {
   });
   
   $('#response').empty();
-}
-
-function cleanForm() {
-  var fields = $("#contact-form").serializeArray();
-  
-  jQuery.each(fields, function(i, field) {
-    $('#' + field.name).val('');
-  });
-}
-
-function sendMail() {
-  $.ajax({
-    type: "post",
-    url: "http://shrouded-oasis-7984.herokuapp.com/send_email",
-    data: $('#contact-form').serialize(),
-    dataType: "json",
-    success: function(response) {
-      if (response.message === "success") {
-        writeMessage("Your message has been successfully sent.  Thank you.", false);
-        cleanForm();
-      } else {
-        writeMessage("Whoops!  There was an error sending your message.  Please try again.", true);
-      }
-    }
-  });
 }
