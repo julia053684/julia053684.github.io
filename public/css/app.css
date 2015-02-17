@@ -9461,3 +9461,14 @@ h4 {
 .floating-image {
   margin: 0px 40px 20px 0px;
 }
+
+.attribution {
+  font-size: 0.75em;
+}
+
+.attribution a:visited,
+.attribution a:active,
+.attribution a:link,
+.attribution a:hover {
+  color: white;
+}
