@@ -9472,3 +9472,14 @@ h4 {
 .attribution a:hover {
   color: white;
 }
+
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('public/fonts/Pacifico.ttf');
+}
+
+.signature {
+  font-family: "Pacifico";
+  font-size: 2em;
+}
