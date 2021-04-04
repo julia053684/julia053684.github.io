@@ -1,0 +1,4 @@
+Files
+  robots.txt
+  sitemap.xml
+  feed.xml

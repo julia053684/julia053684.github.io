@@ -1,12 +1,22 @@
 ---
+layout: sitemap
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for page in site.pages %}
     <url>
-      <loc>http://continuum-hypnosis{{ page.url | remove: 'index.html' }}</loc>
+      <loc>http://continuum-hypnosis.com{{ site.baseurl }}{{ page.url }}</loc>
+      {% if page.url == "/index.html" %}
+        <priority>1.0</priority>
+        <changefreq>daily</changefreq>
+      {% else %}
+        {% if page.url contains "index.html" %}
+          <priority>0.1</priority>
+        {% else %}
+          <priority>0.5</priority>
+        {% endif %}
+      {% endif %}
     </url>
   {% endfor %}
 </urlset>
